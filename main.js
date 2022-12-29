@@ -56,4 +56,19 @@ console.log('');
 console.log('=========');
 console.log('');
 
-// 4. Напишите функцию 
+// 4. Напишите функцию camelize(str), которая преобразует строки вида 'my-short-string' в 'myShortString'.
+// То есть дефисы удаляются, а все слова после них получают заглавную букву. Например:
+// camelize('background-color') => backgroundColor; camelize('list-style-image') => listStyleImage; camelize('-webkit-transition') => WebkitTransition;
+// Вам пригодятся методы строк .split(), .toUpperCase() и .slice();
+
+function camelize(str) {
+
+}
+
+console.log( camelize('background-color') );
+console.log( camelize('list-style-image') );
+console.log( camelize('-webkit-transition') );
+
+console.log('');
+console.log('=========');
+console.log('');
