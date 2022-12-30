@@ -62,7 +62,13 @@ console.log('');
 // Вам пригодятся методы строк .split(), .toUpperCase() и .slice();
 
 function camelize(str) {
-
+    let array = str.split('');
+    array.forEach(function(el, i, arr) {
+        if (arr[i] == '-') {
+            arr[i + 1] = arr[i+1].toUpperCase();
+        }
+    });
+    return array.join('').split('-').join('');
 }
 
 console.log( camelize('background-color') );
@@ -72,3 +78,19 @@ console.log( camelize('-webkit-transition') );
 console.log('');
 console.log('=========');
 console.log('');
+
+// 5. Код ниже получает из массива строк новый массив, содержащий их длины:
+// let arr = ['Не', 'макбук', 'делает', 'из', 'тебя', 'мастера']
+// let arrLength = [];
+// for (let i = 0; i < arr.length; i++) {
+//      arrLength[i] = arr[i].length;
+//}
+// console.log(arrLength); // [2, 6, 6, 2, 4, 7]
+// Перепишите код используя метод .map()
+
+let arr = ['Не', 'макбук', 'делает', 'из', 'тебя', 'мастера']
+let arrLength = arr.map(function(el, i, arr) {
+    return arr[i].length;
+});
+
+console.log(arrLength);
