@@ -9,9 +9,9 @@ function min(a, b) {
     }
 }
 
-console.log( min(2, 5) );
-console.log( min(3, -1) );
-console.log( min(1, 1) );
+// console.log( min(2, 5) );
+// console.log( min(3, -1) );
+// console.log( min(1, 1) );
 
 console.log('');
 console.log('=========');
@@ -25,9 +25,9 @@ function ucFirst(str) {
     return upper + str.slice(1);
 }
 
-console.log( ucFirst('вася') );
-console.log( ucFirst('мыша') );
-console.log( ucFirst('свома') );
+// console.log( ucFirst('вася') );
+// console.log( ucFirst('мыша') );
+// console.log( ucFirst('свома') );
 
 console.log('');
 console.log('=========');
@@ -47,10 +47,10 @@ function truncate(str, maxLength) {
     }
 }
 
-console.log( truncate('Вот, что мне хотелось бы сказать на эту тему:', 20) );
-console.log( truncate('Всем привет!', 20) );
-console.log( truncate('Люблю мышеньку!', 20) );
-console.log( truncate('Девятнадцать символов, а лишнее отрезать!', 20) );
+// console.log( truncate('Вот, что мне хотелось бы сказать на эту тему:', 20) );
+// console.log( truncate('Всем привет!', 20) );
+// console.log( truncate('Люблю мышеньку!', 20) );
+// console.log( truncate('Девятнадцать символов, а лишнее отрезать!', 20) );
 
 console.log('');
 console.log('=========');
@@ -71,9 +71,32 @@ function camelize(str) {
     return array.join('').split('-').join('');
 }
 
-console.log( camelize('background-color') );
-console.log( camelize('list-style-image') );
-console.log( camelize('-webkit-transition') );
+// console.log( camelize('background-Color') );
+// console.log( camelize('list-style-image') );
+// console.log( camelize('-webkit-transition') );
+
+console.log('');
+console.log('=========');
+console.log('');
+
+// MOUSE
+
+function camelize2(str) {
+    let array = str.split('-');
+    array = array.map(function(el, i) {
+        if (i >= 1) {
+            let upper = el[0].toUpperCase();
+            return upper + el.slice(1);
+        } else {
+            return el
+        }
+    });
+    return array.join('')
+}
+
+console.log( camelize2('background-color') );
+console.log( camelize2('list-style-image') );
+console.log( camelize2('-webkit-transition') );
 
 console.log('');
 console.log('=========');
@@ -91,6 +114,18 @@ console.log('');
 let arr = ['Не', 'макбук', 'делает', 'из', 'тебя', 'мастера']
 let arrLength = arr.map(function(el, i, arr) {
     return arr[i].length;
+});
+
+console.log(arrLength);
+
+
+console.log('');
+console.log('Исправление от мыша');
+console.log('');
+
+let arr1 = ['Не', 'макбук', 'делает', 'из', 'тебя', 'мастера']
+let arrLength1 = arr.map(function(el) {
+    return el.length;
 });
 
 console.log(arrLength);
